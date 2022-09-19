@@ -1,0 +1,133 @@
+<!doctype html>
+<html lang="en">
+    <head>
+        <title>Tempat Makan Kawasan SV UGM</title>
+        <link rel="stylesheet" href="http://cdn.leafletjs.com/leaflet-0.7/leaflet.css"/>
+        <script src="http://cdn.leafletjs.com/leaflet-0.7.3/leaflet.js"></script>
+
+        <style>body {
+        padding: 0;
+        margin: 0;
+        }
+        html,body,#map { height: 100%; width: 100%;
+        }
+        </style>
+    </head>
+
+    <body>
+        <div id="map"></div>
+        <script 
+        src="http://cdn.leafletjs.com/leaflet-0.7/leaflet.js">
+        </script>
+
+        <script
+        src="https://rawgit.com/k4r573n/leaflet-control-osm-geocoder/master/Control.OSMGeocoder.js">
+        </script>
+
+        <script>
+            var map = L.map('map').setView([-7.77462996883246, 110.37343321817768],17);
+             mapLink = '<a href="http://openstreetmap.org">OpenStreetMap</a>';
+             L.tileLayer(
+            'http://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png',{
+                attribution: '&copy;' + mapLink + 'Contributors',
+                maxZoom: 20,
+            }).addTo(map);
+
+            var osmGeocoder= new L.Control.OSMGeocoder({
+                collapsed: false,
+                position: 'bottomright',
+                text: 'Cari!',
+            });
+
+            map.addControl(osmGeocoder);
+
+            var customIcon= L.Icon.extend({
+            options: {
+                iconSize: [40,20],
+                }
+            })
+            var MakanIcon = new customIcon({iconUrl:'https://www.svgrepo.com/show/44165/restaurant.svg'});
+            
+            var marker1 = L.marker([-7.774030413724397, 110.3750712988598], {icon:MakanIcon}).addTo(map);
+            var marker2 = L.marker([-7.774219272396891, 110.37504551261439], {icon:MakanIcon}).addTo(map);
+            var marker3 = L.marker([-7.774363069882206, 110.37499926193598], {icon:MakanIcon}).addTo(map);
+            var marker4 = L.marker([-7.774114979686649, 110.37536926736975], {icon:MakanIcon}).addTo(map);
+            var marker5 = L.marker([-7.774318824508346, 110.37534534460505], {icon:MakanIcon}).addTo(map);
+            var marker6 = L.marker([-7.774781320134939, 110.37521490685094], {icon:MakanIcon}).addTo(map);
+            var marker7 = L.marker([-7.775150049852123, 110.37507055741821], {icon:MakanIcon}).addTo(map);
+            var marker8 = L.marker([-7.775751415940237, 110.37478796859614], {icon:MakanIcon}).addTo(map);
+            var marker9 = L.marker([-7.775301958128301, 110.37291906770793], {icon:MakanIcon}).addTo(map);
+            var marker10 = L.marker([-7.775185025938206, 110.37256501612721], {icon:MakanIcon}).addTo(map);
+            var marker11 = L.marker([-7.773983811539263, 110.37194274363372], {icon:MakanIcon}).addTo(map);
+            var marker12 = L.marker([-7.774953486811557, 110.37123162295877], {icon:MakanIcon}).addTo(map);
+            var marker13 = L.marker([-7.773493923526424, 110.37447990831112], {icon:MakanIcon}).addTo(map);
+            var marker14 = L.marker([-7.772718092461571, 110.37575457660915], {icon:MakanIcon}).addTo(map);
+            var marker15 = L.marker([-7.772838360142732, 110.37545301591219], {icon:MakanIcon}).addTo(map);
+            var marker16 = L.marker([-7.772723212096081, 110.37268764088563], {icon:MakanIcon}).addTo(map);
+            var marker17 = L.marker([-7.772783550000904, 110.37243728482858], {icon:MakanIcon}).addTo(map);
+            var marker18 = L.marker([-7.772388001330657, 110.37218918423484], {icon:MakanIcon}).addTo(map);
+            var marker19 = L.marker([-7.772160057864179, 110.37181703334734], {icon:MakanIcon}).addTo(map);
+            var marker20 = L.marker([-7.772404056537046, 110.37158757124605], {icon:MakanIcon}).addTo(map);
+            var marker21 = L.marker([-7.774349556956251, 110.37257668880564], {icon:MakanIcon}).addTo(map);
+            var marker22 = L.marker([-7.774409894633499, 110.37193839364156], {icon:MakanIcon}).addTo(map);
+            var marker23 = L.marker([-7.774076919948556, 110.3718143433386], {icon:MakanIcon}).addTo(map);
+            var marker24 = L.marker([-7.773602564122535, 110.37115759225668], {icon:MakanIcon}).addTo(map);
+            var marker25 = L.marker([-7.773464175605645, 110.37106342451875], {icon:MakanIcon}).addTo(map);
+            var marker26 = L.marker([-7.7729539235654075, 110.37109415977358], {icon:MakanIcon}).addTo(map);
+            var marker27 = L.marker([-7.773077500287261, 110.37109818308805], {icon:MakanIcon}).addTo(map);
+            var marker28 = L.marker([-7.773216025765083, 110.37100866436042], {icon:MakanIcon}).addTo(map);
+            var marker29 = L.marker([-7.773046394883582, 110.37129055429897], {icon:MakanIcon}).addTo(map);
+            var marker30 = L.marker([-7.772522044843732, 110.37200168730327], {icon:MakanIcon}).addTo(map);
+            var marker31 = L.marker([-7.771612905639881, 110.37061419052381], {icon:MakanIcon}).addTo(map);
+            var marker32 = L.marker([-7.771538493595803, 110.3704599635038], {icon:MakanIcon}).addTo(map);
+            var marker33 = L.marker([-7.77127859224693, 110.37051768682231], {icon:MakanIcon}).addTo(map);
+            var marker34 = L.marker([-7.7711364343291445, 110.37094672731514], {icon:MakanIcon}).addTo(map);
+            var marker35 = L.marker([-7.770996705930467, 110.37085611371882], {icon:MakanIcon}).addTo(map);
+            var marker36 = L.marker([-7.771512275494225, 110.37240106611496], {icon:MakanIcon}).addTo(map);
+            var marker37 = L.marker([-7.772162383894884, 110.3701928057769], {icon:MakanIcon}).addTo(map);
+            var marker38 = L.marker([-7.773773476170977, 110.3708134888332], {icon:MakanIcon}).addTo(map);
+            
+
+            marker1.bindPopup('Bakmijowo Barokah').openPopup();
+            marker2.bindPopup('WR Soto dan Penyetan "NEW HOLLYWOOD"').openPopup();
+            marker3.bindPopup('Warung siomay batagor mie ayam pak Kadim').openPopup();
+            marker4.bindPopup('FOOD COURT PLAZA CAMPUS').openPopup();
+            marker5.bindPopup('Angkringan New Hollywood').openPopup();
+            marker6.bindPopup('D cosima Kedai').openPopup();
+            marker7.bindPopup('Madam Tan Indonesian Food').openPopup();
+            marker8.bindPopup('KFC').openPopup();
+            marker9.bindPopup('Warung Pojok Teknik').openPopup();
+            marker10.bindPopup('Bakmi & Nasi Goreng Pak Juki').openPopup();
+            marker11.bindPopup('Aneka Penyetan bilqis (ABMB)BLIMBINGSARI').openPopup();
+            marker12.bindPopup('Angkringan om kempok').openPopup();
+            marker13.bindPopup('Nasi Goreng Mandiri').openPopup();
+            marker14.bindPopup('Food Court UGM Baru').openPopup();
+            marker15.bindPopup('Warung Bakmi Jowo Sederhana').openPopup();
+            marker16.bindPopup('Warung Sate Ayam dan Kambing Madura Al Barokah').openPopup();
+            marker17.bindPopup('Warung Tenda Lik Min').openPopup();
+            marker18.bindPopup('Yamie Gonel Ugm').openPopup();
+            marker19.bindPopup('Warung Makan Kolam Ikan').openPopup();
+            marker20.bindPopup('Mi Becek Joice, Sendowo').openPopup();
+            marker21.bindPopup('Angkringan').openPopup();
+            marker22.bindPopup('Warung Bu Sardiyem').openPopup();
+            marker23.bindPopup('Warmindo Cimulya 2').openPopup();
+            marker24.bindPopup('Nasi Kulit Srundeng Senolowo').openPopup();
+            marker25.bindPopup('Ayam Geprek dan Indomie Geprek - Sinduadi').openPopup();
+            marker26.bindPopup('Warmindo Manis Lor 2').openPopup();
+            marker27.bindPopup('"IQwae" Warung Penyetan').openPopup();
+            marker28.bindPopup('Bubur ayam Bandung sendowo bilqis').openPopup();
+            marker29.bindPopup('Warung Pak Diko').openPopup();
+            marker30.bindPopup('D Kantin').openPopup();
+            marker31.bindPopup('Warung Makan Bu Dapur').openPopup();
+            marker32.bindPopup('WARUNK IDOLA').openPopup();
+            marker33.bindPopup('Centang Biru').openPopup();
+            marker34.bindPopup('Warung Makan Padang Sendowo').openPopup();
+            marker35.bindPopup('Mie Ayam Bakso Pak To Sendowo').openPopup();
+            marker36.bindPopup('Liandra Cafe & Coffe').openPopup();
+            marker37.bindPopup('Warung Sahnul').openPopup();
+            marker38.bindPopup('Warung Bu Sofi').openPopup();
+           
+
+        </script>
+    </body>
+</html>

@@ -1,0 +1,73 @@
+<!doctype html>
+<html lang="en">
+    <head>
+        <title>Polygon Gedung Departemen Teknologi Kebumian SV UGM</title>
+        <link rel="stylesheet" href="http://cdn.leafletjs.com/leaflet-0.7/leaflet.css"/>
+        <script src="http://cdn.leafletjs.com/leaflet-0.7.3/leaflet.js"></script>
+
+        <style>body {
+        padding: 0;
+        margin: 0;
+        }
+        html,body,#map { height: 100%; width: 100%;
+        }
+        </style>
+    </head>
+
+    <body>
+        <div id="map"></div>
+        <script 
+        src="http://cdn.leafletjs.com/leaflet-0.7/leaflet.js">
+        </script>
+
+        <script
+        src="https://rawgit.com/k4r573n/leaflet-control-osm-geocoder/master/Control.OSMGeocoder.js">
+        </script>
+
+    <script>
+        var mapOptions = {
+            center: [-7.774824263341242, 110.37449182370257],
+            zoom: 18
+        }
+        var map = new L.map('map', mapOptions);
+        googleSat = L.tileLayer('http://{s}.google.com/vt?lyrs=s&x={x}&y={y}&z={z}',{
+        maxZoom: 20,
+        subdomains:['mt0','mt1','mt2','mt3']
+        });        
+        //Add layer to the map
+        map.addLayer(googleSat);
+
+
+        var osmGeocoder= new L.Control.OSMGeocoder({
+                collapsed: false,
+                position: 'bottomright',
+                text: 'Cari!',
+            });
+
+            map.addControl(osmGeocoder);
+
+        var latlngs = [
+            [-7.774604502020976, 110.37450451626148],
+            [-7.774664296978155, 110.37465706689937],
+            [-7.774679577910173, 110.37465036137701],
+            [-7.7746868861818115, 110.37466712518291],
+            [-7.774856305172928, 110.37459872885388],
+            [-7.774876901202186, 110.37465237303279],
+            [-7.774970579904692, 110.37461281045066],
+            [-7.7749459975525665, 110.37455179019715],
+            [-7.775096149196395, 110.37449211104631],
+            [-7.775086847768806, 110.37446730061356],
+            [-7.775109436949728, 110.37445657177778],
+            [-7.775052963994664, 110.37431977911997],
+            [-7.774902812337336, 110.37437945826899],
+            [-7.774848996904915, 110.37424534781842],
+            [-7.774703495890314, 110.37430502696786],
+            [-7.774752660620456, 110.37444383128336],
+          
+        ];
+        var polygon = L.polygon(latlngs, {color: 'blue'});
+        polygon.addTo(map);
+    </script>
+</body>
+</html>
+

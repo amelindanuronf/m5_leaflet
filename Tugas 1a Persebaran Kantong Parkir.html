@@ -1,0 +1,95 @@
+<!doctype html>
+<html lang="en">
+    <head>
+        <title>Kantong Parkir Kawasan UGM</title>
+        <link rel="stylesheet" href="http://cdn.leafletjs.com/leaflet-0.7/leaflet.css"/>
+        <script src="http://cdn.leafletjs.com/leaflet-0.7.3/leaflet.js"></script>
+
+        <style>body {
+        padding: 0;
+        margin: 0;
+        }
+        html,body,#map { height: 100%; width: 100%;
+        }
+        </style>
+    </head>
+
+    <body>
+        <div id="map"></div>
+        <script 
+        src="http://cdn.leafletjs.com/leaflet-0.7/leaflet.js">
+        </script>
+
+        <script
+        src="https://rawgit.com/k4r573n/leaflet-control-osm-geocoder/master/Control.OSMGeocoder.js">
+        </script>
+
+        <script>
+            var map = L.map('map').setView([-7.7699,110.3779],16);
+             mapLink = '<a href="http://openstreetmap.org">OpenStreetMap</a>';
+             L.tileLayer(
+            'http://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png',{
+                attribution: '&copy;' + mapLink + 'Contributors',
+                maxZoom: 20,
+            }).addTo(map);
+
+            var osmGeocoder= new L.Control.OSMGeocoder({
+                collapsed: false,
+                position: 'bottomright',
+                text: 'Cari!',
+            });
+
+        map.addControl(osmGeocoder);
+
+            var customIcon= L.Icon.extend({
+            options: {
+                iconSize: [40,20],
+                }
+            })
+            var ParkirIcon = new customIcon({iconUrl:'https://www.svgrepo.com/show/268088/maps-and-flags-parking.svg'});
+            
+            var marker1 = L.marker([-7.76382,110.37494], {icon:ParkirIcon}).addTo(map);
+            var marker2 = L.marker([-7.76619,110.37770], {icon:ParkirIcon}).addTo(map);
+            var marker3 = L.marker([-7.76729,110.37595], {icon:ParkirIcon}).addTo(map);
+            var marker4 = L.marker([-7.76828,110.37508], {icon:ParkirIcon}).addTo(map);
+            var marker5 = L.marker([-7.77113,110.37567], {icon:ParkirIcon}).addTo(map);
+            var marker6 = L.marker([-7.77206,110.37661], {icon:ParkirIcon}).addTo(map);
+            var marker7 = L.marker([-7.77257,110.37691], {icon:ParkirIcon}).addTo(map);
+            var marker8 = L.marker([-7.77368,110.37662], {icon:ParkirIcon}).addTo(map);
+            var marker9 = L.marker([-7.77302,110.37734], {icon:ParkirIcon}).addTo(map);
+            var marker10 = L.marker([-7.77333,110.37726], {icon:ParkirIcon}).addTo(map);
+            var marker11 = L.marker([-7.77493,110.37699], {icon:ParkirIcon}).addTo(map);
+            var marker12 = L.marker([-7.77297,110.37992], {icon:ParkirIcon}).addTo(map);
+            var marker13 = L.marker([-7.77409,110.38070], {icon:ParkirIcon}).addTo(map);
+            var marker14 = L.marker([-7.77624,110.38125], {icon:ParkirIcon}).addTo(map);
+            var marker15 = L.marker([-7.77201,110.37830], {icon:ParkirIcon}).addTo(map);
+            var marker16 = L.marker([-7.77127,110.38247], {icon:ParkirIcon}).addTo(map);
+            var marker17 = L.marker([-7.76940,110.38119], {icon:ParkirIcon}).addTo(map);
+            var marker18 = L.marker([-7.76841,110.37933], {icon:ParkirIcon}).addTo(map);
+            var marker19 = L.marker([-7.76916,110.37961], {icon:ParkirIcon}).addTo(map);
+            var marker20 = L.marker([-7.77049,110.37854], {icon:ParkirIcon}).addTo(map);
+           
+            marker1.bindPopup('KP. Pasca Sarjana UGM').openPopup();
+            marker2.bindPopup('KP. Fakultas Geografi').openPopup();
+            marker3.bindPopup('KP. Fakultas MIPA').openPopup();
+            marker4.bindPopup('KP. FKKMK').openPopup();
+            marker5.bindPopup('KP. FKKMK').openPopup();
+            marker6.bindPopup('KP. Gedung GIK UGM').openPopup();
+            marker7.bindPopup('KP. Gedung GIK UGM').openPopup();
+            marker8.bindPopup('KP. Gedung DSSDI UGM').openPopup();
+            marker9.bindPopup('KP. Gedung UC UGM').openPopup();
+            marker10.bindPopup('KP. Gedung DPP UGM').openPopup();
+            marker11.bindPopup('KP. Gedung DPKM UGM').openPopup();
+            marker12.bindPopup('KP. Masjid Kampus').openPopup();
+            marker13.bindPopup('KP. Lembah UGM').openPopup();
+            marker14.bindPopup('KP. Wisma MM UGM').openPopup();
+            marker15.bindPopup('KP. FIB').openPopup();
+            marker16.bindPopup('KP. UGM Sports Centre').openPopup();
+            marker17.bindPopup('KP. Fakultas Pertanian').openPopup();
+            marker18.bindPopup('KP. Gedung Pusat UGM').openPopup();
+            marker19.bindPopup('KP. Fisipol').openPopup();
+            marker20.bindPopup('KP. GSP').openPopup();
+           
+        </script>
+    </body>
+</html>
